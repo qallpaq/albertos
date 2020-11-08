@@ -1,0 +1,33 @@
+.order-list__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.order-list__item {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #242424;
+}
+
+.order__list-btn {
+    padding: 5px;
+    background: none;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 650px) {
+    .order-list {
+        font-size: 15px;
+
+        &-row {
+            padding: 20px 0;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    font-family: 'Merriweather', serif;
+    line-height: 1.5;
+    color: #242424;
+}
+
+a, ul, li {
+    text-decoration: none;
+    padding: 0;
+    list-style: none;
+}
+
+button:focus, input:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px;
+    background: #fcf6ec;
+    animation: pageAnimation .5s;
+    overflow: hidden;
+}
+
+.app {
+    min-height: 100vh;
+    position: relative;
+    background: url('http://max-themes.net//demos/albertos/upload/slide4.jpg') no-repeat 50% 50% fixed;
+    background-size: cover;
+
+    &-content {
+        padding: 165px 0 0 250px;
+    }
+}
+
+
+@keyframes pageAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 1248px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .app-content {
+        padding: 150px 0 0;
+    }
+
+    .container {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        margin-top: 20px;
+        max-width: 500px;
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app-content {
+        text-align: center;
+    }
+}

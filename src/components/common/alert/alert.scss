@@ -1,0 +1,39 @@
+.alert {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(73, 143, 246);
+    padding: 20px;
+    z-index: 4;
+    border-radius: 5px;
+    animation: animation-alert .2s;
+    width: 270px;
+}
+
+.alert-title {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.alert-close {
+    cursor: pointer;
+}
+
+@keyframes animation-alert {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+    80% {
+        right: 20px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+}

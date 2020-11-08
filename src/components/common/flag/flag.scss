@@ -1,0 +1,30 @@
+.menu-list__flag {
+    position: absolute;
+    top: -60px;
+    left: 50px;
+    color: #fff;
+    background: #242424;
+    border-left: 6px solid orange;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    h2 {
+        font-weight: 800;
+    }
+
+    i {
+        color: orange;
+        margin-right: 20px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .menu-list__flag {
+        left: 0;
+        width: 100%;
+    }
+}
