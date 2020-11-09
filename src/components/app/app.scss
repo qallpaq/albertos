@@ -36,7 +36,6 @@ button, a {
     padding: 50px;
     background: #fcf6ec;
     animation: pageAnimation .5s;
-    overflow: hidden;
 }
 
 .app {
@@ -44,6 +43,7 @@ button, a {
     position: relative;
     background: url('http://max-themes.net//demos/albertos/upload/slide4.jpg') no-repeat 50% 50% fixed;
     background-size: cover;
+    overflow: hidden;
 
     &-content {
         padding: 165px 0 0 250px;

@@ -29,10 +29,10 @@ const updateOrderList = (cartItems, item, idx) => {
 };
 
 const updateOrderItem = (pizza, item = {}, quantity) => {
-    const {id = pizza.id, count = 0, name = pizza.name, total = 0} = item;
+    const {id = pizza.id, count = 0, name = pizza.name, total = 0, image = pizza.img} = item;
 
     return {
-        id, name, count: count + quantity, total: total + quantity * pizza.price
+        id, name, count: count + quantity, total: total + quantity * pizza.price, image
     }
 };
 
