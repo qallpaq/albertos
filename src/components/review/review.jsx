@@ -4,6 +4,7 @@ import ReviewForm from "../review-form/review-form";
 
 
 const ReviewItems = ({reviews}) => {
+
     return (
         reviews.map((el, idx) => {
             return (
@@ -13,9 +14,7 @@ const ReviewItems = ({reviews}) => {
                         <p className='review__date'>{el.date}</p>
                     </div>
                     <div className='review__text'>
-                        <p>
-                            <i>{el.review}</i>
-                        </p>
+                        {el.review}
                     </div>
                 </div>
             )

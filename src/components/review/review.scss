@@ -1,9 +1,21 @@
+.review {
+    margin-top: 40px;
+}
+
 .review__items {
     margin-top: 40px;
+    text-align: left;
 }
 
 .review__item {
     margin-bottom: 20px;
+    background: #ffffff;
+    padding: 15px;
+}
+
+.review__text {
+    max-width: 100%;
+    font-style: italic;
 }
 
 .review__title {

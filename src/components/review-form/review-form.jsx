@@ -13,7 +13,7 @@ const minLength5 = minLengthCreator(5);
 
 const ReviewForm = ({handleSubmit}) => {
     return (
-        <form className='review' onSubmit={handleSubmit}>
+        <form className='review-form' onSubmit={handleSubmit}>
             <div className='review__content'>
                 <Field component={Input}
                        validate={[required]}

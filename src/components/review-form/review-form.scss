@@ -1,0 +1,10 @@
+.review-form {
+    width: 500px;
+    margin: auto;
+}
+
+@media screen and (max-width: 650px) {
+    .review-form {
+        width: 100%;
+    }
+}

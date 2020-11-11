@@ -1,7 +1,11 @@
 //basic-reducer
 export const CURRENT_PAGE = 'CURRENT_PAGE';
-
 export const changeCurrentPage = (currentPage) => ({type: CURRENT_PAGE, payload: currentPage});
+
+
+//about-reducer
+export const ADD_REVIEW = 'ADD_REVIEW';
+export const addReview = (review) => ({type: ADD_REVIEW, payload: review});
 
 
 //pizza-reducer
