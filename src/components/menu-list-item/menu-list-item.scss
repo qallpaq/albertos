@@ -102,6 +102,7 @@
 @media screen and (max-width: 480px) {
     .menu-list__item {
         height: 170px;
+        margin: 30px 0;
     }
 
     .menu-list__image-wrapper {
@@ -112,10 +113,6 @@
     .menu-list__info {
         padding: 15px;
         font-size: 15px;
-    }
-
-    .menu-list__item:hover {
-        height: 300px;
     }
 
     .menu-list__item:hover .menu-list__info {

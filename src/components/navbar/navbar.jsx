@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
 import './navbar.scss';
 import Footer from "../footer";
+import MobileNavbar from "../mobile-navbar";
 
 
 const Navbar = () => {
@@ -15,6 +16,12 @@ const Navbar = () => {
     ];
 
     const currentPage = useSelector(state => state.basic.currentPage);
+
+    const [menu, setMenu] = useState(false);
+
+    const closeMenu = () => {
+        return setMenu(false)
+    };
 
     return (
         <div className='navbar'>
@@ -36,6 +43,10 @@ const Navbar = () => {
                     })
                 }
             </ul>
+            <div className='burger' onClick={() => setMenu(() => !menu)}>
+                <i className="fas fa-bars"/>
+            </div>
+            <MobileNavbar menu={menu} closeMenu={closeMenu} links={links}/>
             <Footer/>
         </div>
     );

@@ -4,7 +4,6 @@ import ReviewForm from "../review-form/review-form";
 
 
 const ReviewItems = ({reviews}) => {
-
     return (
         reviews.map((el, idx) => {
             return (

@@ -5,12 +5,12 @@ const initialState = {
     reviews: [
         {
             name: 'Jacombo',
-            review: 'Very tasty pizza, recommended to everyone',
+            review: 'Very tasty pizza,i will recommend it to my Natasha',
             date: '28.11.2020',
         },
         {
             name: 'D. Onton',
-            review: 'Very tasty, but grill chicken tastes better',
+            review: 'Nice, but grill chicken tastes better',
             date: '30.05.2020',
         },
         {
