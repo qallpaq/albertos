@@ -2,17 +2,39 @@ import React, {useState} from 'react';
 import './order-list.scss';
 import Flag from "../common/flag";
 import MainButton from "../common/main-button";
+import ModalWindow from "../modal-window";
+import Alert from "../common/alert";
 
 
 const OrderList = ({orderList, onIncrease, onDecrease}) => {
 
     const [form, setForm] = useState(false);
 
+    const [alert, setAlert] = useState(false);
+    const alertOff = (a) => {
+        setAlert(false)
+        clearTimeout(a)
+    }
+
+    const closeWindow = () => {
+        setForm(false)
+    };
+
+    const onSubmit = (formData) => {
+        for (const prop of Object.keys(formData)) {
+            delete formData[prop];
+        }
+        setAlert(true);
+    };
+
     return (
         <div className='container'>
-            {form && <div onClick={() => setForm(false)}>buy this shit</div>}
+            {alert && <Alert text='Orders is accepted!)' alertOff={alertOff}/>}
+            {form && <ModalWindow closeWindow={closeWindow} onSubmit={onSubmit}/>}
             <div className='order-list'>
+
                 <Flag title='order'/>
+
                 <div className='order__images'>
                     {
                         orderList.map(el => {
@@ -32,6 +54,8 @@ const OrderList = ({orderList, onIncrease, onDecrease}) => {
                     <div className='order-list__item'>Quantity</div>
                     <div className='order-list__item'>Price</div>
                 </div>
+                {orderList.length === 0 &&
+                <h1 style={{textAlign: 'center', color: 'orange'}}>Take some pizza from MENU</h1>}
                 {
                     orderList.map((el, idx) => {
                         return (
@@ -40,11 +64,13 @@ const OrderList = ({orderList, onIncrease, onDecrease}) => {
                                 <div className='order-list__item'>{el.name}</div>
                                 <div className='order-list__item'>
                                     <button className='order__list-btn order__list-btn_red'
-                                            onClick={() => onDecrease(el.id)}>-
+                                            onClick={() => onDecrease(el.id)}>
+                                        <i className="fas fa-minus-square"/>
                                     </button>
                                     {el.count}
                                     <button className='order__list-btn order__list-btn_green'
-                                            onClick={() => onIncrease(el.id)}>+
+                                            onClick={() => onIncrease(el.id)}>
+                                        <i className="fas fa-plus-square"/>
                                     </button>
                                 </div>
                                 <div className='order-list__item'>{el.total.toFixed(2)}$</div>

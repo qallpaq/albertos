@@ -2,27 +2,17 @@ import React from 'react';
 import './about.scss';
 import Flag from "../common/flag";
 import SlickSlider from "../common/slider";
-import withCurrentPage from "../../hoc";
+import Review from "../review";
 
 
-const About = () => {
-    const arrayForSlider = [
-        'https://p0.pikist.com/photos/3/517/pizza-chef-cook-uniform-food-pizzeria.jpg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYwg7FIEGFQ4M-8iQn4APCgKv4t4c7GxHYkA&usqp=CAU',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRKciltVpD7HKijcrRLeprK76Z-YE4vrvoqOA&usqp=CAU',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQSSgE_t11YW-FUMoKcXebEIw1pPjwgSvmmwQ&usqp=CAU',
-        'https://media02.stockfood.com/previews/MTMzOTQ4MTg4/11162349.jpg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2Iqx5f9FjtW331g0VpDMNpm-z-6NLqIB5-g&usqp=CAU'
-    ];
-
+const About = ({arrayForSlider, onSubmit, reviews}) => {
     return (
         <div className='container'>
             <div className='about'>
                 <Flag title='about us'/>
                 <div className='about__content'>
                     <div className='about__item'>
-                        <h1 className='about__item-title'>WE USE FRESH INGREDIENTS
-                        </h1>
+                        <h1 className='about__item-title'>WE USE FRESH INGREDIENTS</h1>
                         <div className='about__item-text'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -49,6 +39,10 @@ const About = () => {
                         </div>
                         <SlickSlider arr={arrayForSlider}/>
                     </div>
+
+                    <div className='about__item'>
+                        <Review reviews={reviews} onSubmit={onSubmit}/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,4 +50,4 @@ const About = () => {
 };
 
 
-export default withCurrentPage(About, 4);
+export default About;

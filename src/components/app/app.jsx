@@ -5,8 +5,8 @@ import Navbar from "../navbar";
 import HomePage from "../home-page";
 import MenuListContainer from "../menu-list";
 import OrderListContainer from "../order-list";
-import About from "../about";
 import ContactPage from "../contact-page";
+import AboutContainer from "../about/about-container";
 
 
 const AppContent = ({children}) => {
@@ -26,7 +26,7 @@ const App = () => {
                 <AppContent>
                     <Route path='/menu' exact component={MenuListContainer}/>
                     <Route path='/order' exact component={OrderListContainer}/>
-                    <Route path='/about' exact component={About}/>
+                    <Route path='/about' exact component={AboutContainer}/>
                     <Route path='/contact' exact component={ContactPage}/>
                 </AppContent>
             </Switch>

@@ -9,12 +9,15 @@ import withCurrentPage from "../../hoc";
 const ContactPage = () => {
 
     const [alert, setAlert] = useState(false);
+    const alertOff = (a) => {
+        setAlert(false)
+        clearTimeout(a)
+    }
 
     const onSubmit = (formData) => {
         for (const prop of Object.keys(formData)) {
             delete formData[prop];
         }
-
         setAlert(true);
     };
 
@@ -45,7 +48,7 @@ const ContactPage = () => {
                     </div>
 
                     <div className='contact__right'>
-                        {alert ? <Alert setAlert={() => setAlert(false)}/> : null}
+                        {alert && <Alert text='message sent' alertOff={alertOff}/>}
                         <ContactForm onSubmit={onSubmit}/>
                     </div>
                 </div>

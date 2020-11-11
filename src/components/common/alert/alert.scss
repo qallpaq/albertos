@@ -1,5 +1,5 @@
 .alert {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -7,10 +7,10 @@
     justify-content: space-between;
     background-color: rgb(73, 143, 246);
     padding: 20px;
-    z-index: 4;
     border-radius: 5px;
-    animation: animation-alert .2s;
+    animation: animation-alert 4s ease;
     width: 270px;
+    z-index: 12;
 }
 
 .alert-title {
@@ -27,13 +27,16 @@
         opacity: 0;
         right: -100px;
     }
-
-    80% {
-        right: 20px;
-    }
-
-    100% {
+    10% {
         opacity: 1;
         right: 0;
+    }
+    90% {
+        opacity: 1;
+        right: 0;
+    }
+    100% {
+        opacity: 0;
+        right: -100px;
     }
 }
