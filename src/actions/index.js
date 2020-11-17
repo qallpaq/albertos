@@ -1,14 +1,21 @@
 //basic-reducer
 export const CURRENT_PAGE = 'CURRENT_PAGE';
+export const IS_FETCHING_ON = 'IS_FETCHING_ON';
+export const IS_FETCHING_OFF = 'IS_FETCHING_OFF';
+
 export const changeCurrentPage = (currentPage) => ({type: CURRENT_PAGE, payload: currentPage});
+export const isFetchingOn = () => ({type: IS_FETCHING_ON});
+export const isFetchingOff = () => ({type: IS_FETCHING_OFF});
 
 
 //about-reducer
 export const ADD_REVIEWS = 'ADD_REVIEWS';
 export const ADD_REVIEW = 'ADD_REVIEW';
+export const ADD_STARS = 'ADD_STARS';
 
 export const addReviews = (reviews) => ({type: ADD_REVIEWS, payload: reviews});
 export const addReview = (review) => ({type: ADD_REVIEW, payload: review});
+export const addStars = (stars) => ({type: ADD_STARS, payload: stars});
 
 
 //pizza-reducer

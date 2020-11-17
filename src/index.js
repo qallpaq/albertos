@@ -5,6 +5,7 @@ import {HashRouter as Router} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./store";
 import firebase from "firebase";
+import SelectorContextProvider from "./components/selector-context";
 
 
 const firebaseConfig = {
@@ -23,7 +24,9 @@ firebase.initializeApp(firebaseConfig);
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <App/>
+            <SelectorContextProvider>
+                <App/>
+            </SelectorContextProvider>
         </Router>
     </Provider>
     , document.getElementById('root'));

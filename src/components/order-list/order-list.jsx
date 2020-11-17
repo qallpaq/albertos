@@ -4,7 +4,7 @@ import Flag from "../common/flag";
 import MainButton from "../common/main-button";
 import ModalWindow from "../modal-window";
 import Alert from "../common/alert";
-import {Link} from "react-router-dom";
+import OrderEmptyList from "../order-emprt-list";
 
 
 const OrderList = ({orderList, onIncrease, onDecrease}) => {
@@ -55,9 +55,9 @@ const OrderList = ({orderList, onIncrease, onDecrease}) => {
                     <div className='order-list__item'>Quantity</div>
                     <div className='order-list__item'>Price</div>
                 </div>
-                {orderList.length === 0 &&
-                <h1 style={{textAlign: 'center', color: 'orange'}}>Take some pizza from <Link to='/menu'>MENU</Link>
-                </h1>}
+
+                {orderList.length === 0 && <OrderEmptyList/>}
+
                 {
                     orderList.map((el, idx) => {
                         return (

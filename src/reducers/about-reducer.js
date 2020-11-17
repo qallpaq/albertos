@@ -1,4 +1,4 @@
-import {ADD_REVIEW, ADD_REVIEWS} from "../actions";
+import {ADD_REVIEW, ADD_REVIEWS, ADD_STARS} from "../actions";
 
 
 const initialState = {
@@ -11,7 +11,9 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQSSgE_t11YW-FUMoKcXebEIw1pPjwgSvmmwQ&usqp=CAU',
         'https://media02.stockfood.com/previews/MTMzOTQ4MTg4/11162349.jpg',
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2Iqx5f9FjtW331g0VpDMNpm-z-6NLqIB5-g&usqp=CAU'
-    ]
+    ],
+
+    stars: 5
 };
 
 
@@ -26,6 +28,11 @@ const aboutReducer = (state = initialState, action) => {
             return {
                 ...state,
                 reviews: [...state.reviews, action.payload]
+            }
+        case ADD_STARS:
+            return {
+                ...state,
+                stars: action.payload
             }
         default:
             return state

@@ -5,14 +5,14 @@ import {connect} from "react-redux";
 import {getReview, getReviews} from "../../thunk";
 
 
-const AboutContainer = ({arrayForSlider, reviews, getReviews, getReview}) => {
+const AboutContainer = ({arrayForSlider, reviews, getReviews, getReview, stars}) => {
 
     useEffect(() => {
         getReviews()
     }, [])
 
     const onSubmit = (data) => {
-        getReview(data)
+        getReview(data, stars)
 
         for (const prop of Object.keys(data)) {
             delete data[prop];
@@ -22,11 +22,12 @@ const AboutContainer = ({arrayForSlider, reviews, getReviews, getReview}) => {
     return <About arrayForSlider={arrayForSlider}
                   onSubmit={onSubmit}
                   reviews={reviews}/>
+
 };
 
 
-const mapStateToProps = ({aboutPage: {reviews, arrayForSlider}}) => {
-    return {reviews, arrayForSlider}
+const mapStateToProps = ({aboutPage: {reviews, arrayForSlider, stars}}) => {
+    return {reviews, arrayForSlider, stars}
 };
 
 const mapDispatchToProps = {
