@@ -15,17 +15,16 @@ const ReviewItems = ({reviews}) => {
     }
 
     return (
-        Array.from(reviews).map((el, idx) => {
+        Array.from(reviews).map(el => {
             const stars = [];
             for (let i = 1; i <= el.stars; i++) {
                 stars.push(i)
             }
             return (
-                <div className='review__item' key={idx}>
+                <div className='review__item' key={el}>
 
-                    <Stars
-                        arrayForStars={stars}
-                        mod={' yellow'}/>
+                    <Stars arrayForStars={stars}
+                           mod={' yellow'}/>
 
                     <div className='review__title'>
                         <h3 className='review__name'>{el.name}</h3>

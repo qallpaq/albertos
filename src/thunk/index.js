@@ -13,7 +13,7 @@ export const getReviews = () => (dispatch) => {
     const aboutService = new AboutService();
     aboutService.fetchReviews()
         .then(res => {
-            dispatch(addReviews(res))
+            dispatch(addReviews(res.reverse()))
             dispatch(isFetchingOff())
         })
 };
