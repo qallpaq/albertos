@@ -1,24 +1,8 @@
-import {ADD_REVIEW} from "../actions";
+import {ADD_REVIEW, ADD_REVIEWS} from "../actions";
 
 
 const initialState = {
-    reviews: [
-        {
-            name: 'Jacombo',
-            review: 'Very tasty pizza,i will recommend it to my Natasha',
-            date: '28.11.2020',
-        },
-        {
-            name: 'D. Onton',
-            review: 'Nice, but grill chicken tastes better',
-            date: '30.05.2020',
-        },
-        {
-            name: 'Grisha',
-            review: 'Not bad...',
-            date: '23.03.2020',
-        },
-    ],
+    reviews: [],
 
     arrayForSlider: [
         'https://p0.pikist.com/photos/3/517/pizza-chef-cook-uniform-food-pizzeria.jpg',
@@ -33,14 +17,15 @@ const initialState = {
 
 const aboutReducer = (state = initialState, action) => {
     switch (action.type) {
+        case ADD_REVIEWS:
+            return {
+                ...state,
+                reviews: action.payload
+            }
         case ADD_REVIEW:
             return {
                 ...state,
-                reviews: [{
-                    name: action.payload.reviewerName,
-                    review: action.payload.reviewerText,
-                    date: new Date().toLocaleDateString(),
-                }, ...state.reviews]
+                reviews: [...state.reviews, action.payload]
             }
         default:
             return state

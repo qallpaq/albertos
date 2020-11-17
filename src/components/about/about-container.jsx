@@ -1,14 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import withCurrentPage from "../../hoc";
 import About from "./about";
 import {connect} from "react-redux";
-import {addReview} from "../../actions";
+import {getReview, getReviews} from "../../thunk";
 
 
-const AboutContainer = ({arrayForSlider, addReview, reviews}) => {
+const AboutContainer = ({arrayForSlider, reviews, getReviews, getReview}) => {
+
+    useEffect(() => {
+        getReviews()
+    }, [])
 
     const onSubmit = (data) => {
-        addReview(data)
+        getReview(data)
+
         for (const prop of Object.keys(data)) {
             delete data[prop];
         }
@@ -25,7 +30,8 @@ const mapStateToProps = ({aboutPage: {reviews, arrayForSlider}}) => {
 };
 
 const mapDispatchToProps = {
-    addReview
+    getReviews,
+    getReview
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(withCurrentPage(AboutContainer, 4));

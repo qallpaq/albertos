@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './app.scss';
 import {Route, Switch} from "react-router-dom";
 import Navbar from "../navbar";

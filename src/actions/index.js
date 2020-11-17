@@ -4,7 +4,10 @@ export const changeCurrentPage = (currentPage) => ({type: CURRENT_PAGE, payload:
 
 
 //about-reducer
+export const ADD_REVIEWS = 'ADD_REVIEWS';
 export const ADD_REVIEW = 'ADD_REVIEW';
+
+export const addReviews = (reviews) => ({type: ADD_REVIEWS, payload: reviews});
 export const addReview = (review) => ({type: ADD_REVIEW, payload: review});
 
 

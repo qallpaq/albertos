@@ -5,7 +5,7 @@ import ReviewForm from "../review-form/review-form";
 
 const ReviewItems = ({reviews}) => {
     return (
-        reviews.map((el, idx) => {
+        Array.from(reviews).map((el, idx) => {
             return (
                 <div className='review__item' key={idx}>
                     <div className='review__title'>
