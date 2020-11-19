@@ -22,7 +22,6 @@ const AboutContainer = ({arrayForSlider, reviews, getReviews, getReview, stars})
     return <About arrayForSlider={arrayForSlider}
                   onSubmit={onSubmit}
                   reviews={reviews}/>
-
 };
 
 

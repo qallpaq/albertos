@@ -26,7 +26,8 @@ export const getReview = (data, stars) => (dispatch) => {
             name: reviewerName,
             review: reviewerText,
             date: new Date().toLocaleDateString(),
-            stars: stars
+            stars: stars,
+            id: reviewerName + reviewerText + Math.random()
         }
         aboutService.fetchReview(review)
         dispatch(addReview(review))

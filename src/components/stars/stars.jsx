@@ -11,9 +11,9 @@ const Stars = ({arrayForStars = [1, 2, 3, 4, 5], mod = '', onStarClick = () => '
         <div className="stars">
             {arrayForStars.map(el => {
                 return (
-                    <li key={el} className={`stars__item${mod} ${stars === el ? 'active' : ''}`}>
+                    <li key={el} className={`stars__item${mod} ${stars >= el ? 'active' : ''}`}>
                         <i onClick={() => onStarClick(el)}
-                           className="far fa-star">
+                           className="fas fa-star">
                             <span className='stars__item-text'>
                                 {el}
                            </span>
@@ -24,5 +24,6 @@ const Stars = ({arrayForStars = [1, 2, 3, 4, 5], mod = '', onStarClick = () => '
         </div>
     )
 };
+
 
 export default Stars;
