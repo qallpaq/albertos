@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/albertos/static/css/main.4ac8b907.chunk.css",
-    "main.js": "/albertos/static/js/main.42e61aa3.chunk.js",
-    "main.js.map": "/albertos/static/js/main.42e61aa3.chunk.js.map",
+    "main.css": "/albertos/static/css/main.a4af691c.chunk.css",
+    "main.js": "/albertos/static/js/main.e9c7d68e.chunk.js",
+    "main.js.map": "/albertos/static/js/main.e9c7d68e.chunk.js.map",
     "runtime-main.js": "/albertos/static/js/runtime-main.cb06dc70.js",
     "runtime-main.js.map": "/albertos/static/js/runtime-main.cb06dc70.js.map",
     "static/css/2.9d56806a.chunk.css": "/albertos/static/css/2.9d56806a.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.cb83eabe.chunk.js.map": "/albertos/static/js/2.cb83eabe.chunk.js.map",
     "index.html": "/albertos/index.html",
     "static/css/2.9d56806a.chunk.css.map": "/albertos/static/css/2.9d56806a.chunk.css.map",
-    "static/css/main.4ac8b907.chunk.css.map": "/albertos/static/css/main.4ac8b907.chunk.css.map",
+    "static/css/main.a4af691c.chunk.css.map": "/albertos/static/css/main.a4af691c.chunk.css.map",
     "static/js/2.cb83eabe.chunk.js.LICENSE.txt": "/albertos/static/js/2.cb83eabe.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/albertos/static/media/slick.c94f7671.ttf"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.cb06dc70.js",
     "static/css/2.9d56806a.chunk.css",
     "static/js/2.cb83eabe.chunk.js",
-    "static/css/main.4ac8b907.chunk.css",
-    "static/js/main.42e61aa3.chunk.js"
+    "static/css/main.a4af691c.chunk.css",
+    "static/js/main.e9c7d68e.chunk.js"
   ]
 }
