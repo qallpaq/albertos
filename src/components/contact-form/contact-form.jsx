@@ -3,6 +3,7 @@ import './contact-form.scss';
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../utils/validators";
 import {CreateForm} from "../common/forms-controls";
+import MainButton from "../common/main-button";
 
 
 const maxlength150 = maxLengthCreator(150);
@@ -32,7 +33,7 @@ const ContactForm = ({handleSubmit}) => {
                        name={'message'}
                        placeholder='message'/>
             </div>
-            <button className='main-button'>SEND MESSAGE</button>
+            <MainButton text={'send'}/>
         </form>
     );
 };
