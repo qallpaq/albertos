@@ -15,7 +15,9 @@ export const getReviews = () => (dispatch) => {
         .then(res => {
             dispatch(addReviews(res.reverse()))
             dispatch(isFetchingOff())
-        })
+        }).catch(() => {
+        dispatch(isFetchingOff())
+    })
 };
 
 export const getReview = (data, stars) => (dispatch) => {
