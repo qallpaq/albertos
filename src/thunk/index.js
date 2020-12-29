@@ -5,19 +5,27 @@ import AboutService from "../service/aboutApi";
 
 export const getPizzas = () => (dispatch) => {
     const pizza = new PizzaService();
-    pizza.getPizzas().then(res => dispatch(addPizzaList(res)));
+    try {
+        pizza.getPizzas().then(res => dispatch(addPizzaList(res)));
+    } catch (e) {
+        console.log(e.message)
+    }
 };
 
 export const getReviews = () => (dispatch) => {
     dispatch(isFetchingOn())
     const aboutService = new AboutService();
-    aboutService.fetchReviews()
-        .then(res => {
-            dispatch(addReviews(res.reverse()))
+    try {
+        aboutService.fetchReviews()
+            .then(res => {
+                dispatch(addReviews(res.reverse()))
+                dispatch(isFetchingOff())
+            }).catch(() => {
             dispatch(isFetchingOff())
-        }).catch(() => {
-        dispatch(isFetchingOff())
-    })
+        })
+    } catch (e) {
+        console.log(e.message)
+    }
 };
 
 export const getReview = (data, stars) => (dispatch) => {

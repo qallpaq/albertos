@@ -28,6 +28,10 @@ const OrderList = ({orderList, onIncrease, onDecrease}) => {
         setAlert(true);
     };
 
+    const reduceOrder = arr => {
+        return arr.reduce((acc, value) => (acc + value.total), 0).toFixed(2)
+    }
+
     return (
         <div className='container'>
             {alert && <Alert text='Orders is accepted!)' alertOff={alertOff}/>}
@@ -82,7 +86,7 @@ const OrderList = ({orderList, onIncrease, onDecrease}) => {
                 }
                 <div className='order-list__row'>
                     {orderList.length !== 0 && <MainButton text='buy it' fn={() => setForm(true)}/>}
-                    Total: {orderList.reduce((acc, value) => (acc + value.total), 0).toFixed(2)}$
+                    Total: {reduceOrder(orderList)}$
                 </div>
             </div>
         </div>
