@@ -14,7 +14,7 @@ export default class AboutService {
         })
     };
 
-    fetchReview = async (review) => {
-        await axios.post(this.baseURL, review)
+    fetchReview = review => {
+        return axios.post(this.baseURL, review)
     };
 };

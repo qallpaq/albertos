@@ -7,7 +7,6 @@ import withCurrentPage from "../../hoc";
 
 
 const ContactPage = () => {
-
     const [alert, setAlert] = useState(false);
     const alertOff = (a) => {
         setAlert(false)

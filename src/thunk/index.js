@@ -3,29 +3,28 @@ import {addPizzaList, addReview, addReviews, isFetchingOff, isFetchingOn} from "
 import AboutService from "../service/aboutApi";
 
 
-export const getPizzas = () => (dispatch) => {
+export const getPizzas = () => async dispatch => {
     const pizza = new PizzaService();
     try {
-        pizza.getPizzas().then(res => dispatch(addPizzaList(res)));
+        const res = await pizza.getPizzas()
+        dispatch(addPizzaList(res))
     } catch (e) {
-        console.log(e.message)
+        alert(e.message)
     }
 };
 
-export const getReviews = () => (dispatch) => {
+export const getReviews = () => async dispatch => {
     dispatch(isFetchingOn())
     const aboutService = new AboutService();
+
     try {
-        aboutService.fetchReviews()
-            .then(res => {
-                dispatch(addReviews(res.reverse()))
-                dispatch(isFetchingOff())
-            }).catch(() => {
-            dispatch(isFetchingOff())
-        })
+        const res = await aboutService.fetchReviews()
+        dispatch(addReviews(res.reverse()))
     } catch (e) {
         console.log(e.message)
     }
+
+    dispatch(isFetchingOff())
 };
 
 export const getReview = (data, stars) => (dispatch) => {

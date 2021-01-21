@@ -6,7 +6,7 @@ import Spinner from "../common/spinner";
 import './review.scss';
 
 
-const ReviewItems = ({reviews}) => {
+export const ReviewItems = ({reviews}) => {
 
     const {isFetching} = useSelectorContext()
 
