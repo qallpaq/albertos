@@ -1,7 +1,7 @@
 import React from 'react';
 import './contact-form.scss';
 import {Field, reduxForm} from "redux-form";
-import {maxLengthCreator, required} from "../../utils/validators";
+import {maxLengthCreator, required, requiredEmail} from "../../utils/validators";
 import {CreateForm} from "../common/forms-controls";
 import MainButton from "../common/main-button";
 
@@ -23,7 +23,7 @@ const ContactForm = ({handleSubmit}) => {
                        placeholder='name'/>
 
                 <Field component={Input}
-                       validate={[required]}
+                       validate={[required, requiredEmail]}
                        name={'email'}
                        type="text"
                        placeholder='email'/>
