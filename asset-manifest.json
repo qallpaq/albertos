@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/albertos/static/css/main.8b830dd1.chunk.css",
-    "main.js": "/albertos/static/js/main.7e351253.chunk.js",
-    "main.js.map": "/albertos/static/js/main.7e351253.chunk.js.map",
+    "main.css": "/albertos/static/css/main.91767e8c.chunk.css",
+    "main.js": "/albertos/static/js/main.afd96c22.chunk.js",
+    "main.js.map": "/albertos/static/js/main.afd96c22.chunk.js.map",
     "runtime-main.js": "/albertos/static/js/runtime-main.cb06dc70.js",
     "runtime-main.js.map": "/albertos/static/js/runtime-main.cb06dc70.js.map",
     "static/css/2.9d56806a.chunk.css": "/albertos/static/css/2.9d56806a.chunk.css",
@@ -10,15 +10,32 @@
     "static/js/2.ba9cf81b.chunk.js.map": "/albertos/static/js/2.ba9cf81b.chunk.js.map",
     "index.html": "/albertos/index.html",
     "static/css/2.9d56806a.chunk.css.map": "/albertos/static/css/2.9d56806a.chunk.css.map",
-    "static/css/main.8b830dd1.chunk.css.map": "/albertos/static/css/main.8b830dd1.chunk.css.map",
+    "static/css/main.91767e8c.chunk.css.map": "/albertos/static/css/main.91767e8c.chunk.css.map",
     "static/js/2.ba9cf81b.chunk.js.LICENSE.txt": "/albertos/static/js/2.ba9cf81b.chunk.js.LICENSE.txt",
+    "static/media/1-min.3dca363e.jpg": "/albertos/static/media/1-min.3dca363e.jpg",
+    "static/media/2-min.2d508662.jpg": "/albertos/static/media/2-min.2d508662.jpg",
+    "static/media/3-min.8f6c7d65.jpg": "/albertos/static/media/3-min.8f6c7d65.jpg",
+    "static/media/4-min.ed4f0290.jpg": "/albertos/static/media/4-min.ed4f0290.jpg",
+    "static/media/5-min.4e912c1a.jpg": "/albertos/static/media/5-min.4e912c1a.jpg",
+    "static/media/6-min.aa821554.jpg": "/albertos/static/media/6-min.aa821554.jpg",
+    "static/media/7-min.f3ec41d1.jpg": "/albertos/static/media/7-min.f3ec41d1.jpg",
+    "static/media/8-min.ccd9e23c.jpg": "/albertos/static/media/8-min.ccd9e23c.jpg",
+    "static/media/9-min.a82b316f.jpg": "/albertos/static/media/9-min.a82b316f.jpg",
+    "static/media/navbar.scss": "/albertos/static/media/bg-menu-min.6203072d.jpg",
+    "static/media/app.scss": "/albertos/static/media/bg-pizza-min.5a7506c2.jpg",
+    "static/media/chef1-min.61aace03.jpg": "/albertos/static/media/chef1-min.61aace03.jpg",
+    "static/media/chef2-min.61b418f4.jpg": "/albertos/static/media/chef2-min.61b418f4.jpg",
+    "static/media/chef3-min.3053767b.jpg": "/albertos/static/media/chef3-min.3053767b.jpg",
+    "static/media/chef4-min.fc80812b.jpg": "/albertos/static/media/chef4-min.fc80812b.jpg",
+    "static/media/chef5-min.45f7b9db.jpg": "/albertos/static/media/chef5-min.45f7b9db.jpg",
+    "static/media/chef6-min.c357544c.jpg": "/albertos/static/media/chef6-min.c357544c.jpg",
     "static/media/slick-theme.css": "/albertos/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.cb06dc70.js",
     "static/css/2.9d56806a.chunk.css",
     "static/js/2.ba9cf81b.chunk.js",
-    "static/css/main.8b830dd1.chunk.css",
-    "static/js/main.7e351253.chunk.js"
+    "static/css/main.91767e8c.chunk.css",
+    "static/js/main.afd96c22.chunk.js"
   ]
 }
