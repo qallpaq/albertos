@@ -5,7 +5,7 @@ import SlickSlider from "../common/slider";
 import Review from "../review";
 
 
-const About = ({arrayForSlider, onSubmit, reviews}) => {
+const About = ({onSubmit, reviews}) => {
     return (
         <div className='container'>
             <div className='about'>
@@ -37,7 +37,7 @@ const About = ({arrayForSlider, onSubmit, reviews}) => {
                             mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua
                         </div>
-                        <SlickSlider arr={arrayForSlider}/>
+                        <SlickSlider/>
                     </div>
 
                     <div className='about__item'>

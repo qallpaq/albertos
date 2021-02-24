@@ -7,7 +7,7 @@ const OrderEmptyList = () => {
     return (
         <div className='order__empty'>
             <h1 className='order__empty-title'>
-                Take some pizza from
+                Your order is empty. Take some pizza from
                 <Link className='order__empty-link' to='/menu'>
                     <p aria-label="CodePen" className='order__empty-MENU'>
                         <span data-text="M">M</span>

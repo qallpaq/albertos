@@ -13,13 +13,8 @@
 .slide {
     width: 100%;
     height: 35vh;
-}
-
-.slick-slide img {
-    width: 100%;
-    height: 100%;
+    padding: 5px;
     cursor: pointer;
-    padding: 10px;
 }
 
 @media screen and (max-width: 600px) {
